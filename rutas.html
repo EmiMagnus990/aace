@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rutas de aprendizaje · AACE Cruz del Sur</title>
+  <meta name="description" content="Rutas de aprendizaje por carrera: Ciencias de la Computación, Ciencias Médicas y Biológicas e Ingenierías. Cuatro niveles progresivos hacia el sector aeroespacial.">
+  <meta name="theme-color" content="#03050a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/rutas.js" defer></script>
+</head>
+<body data-page="rutas">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="page-hero__deco" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Ubicación" data-reveal><a href="index.html">Inicio</a><i data-icon="chevron-right"></i><span>Rutas de aprendizaje</span></nav>
+        <span class="eyebrow" data-reveal style="--d:100ms">Rutas de aprendizaje</span>
+        <h1 data-split style="--split-delay:200ms">Una ruta distinta para cada <span class="metal">carrera.</span></h1>
+        <p class="lead" data-reveal style="--d:450ms">Tu carrera de interés define tu hoja de ruta: conocimientos mínimos, cursos recomendados y cuatro niveles progresivos que te llevan desde el armado de cohetes hasta el análisis científico.</p>
+        <div class="page-hero__actions" data-reveal style="--d:600ms">
+          <a class="btn btn-primary" href="#explorar">Explorar rutas <i data-icon="arrow-right" class="ico-arrow"></i></a>
+          <a class="btn btn-ghost" href="cursos.html">Ver catálogo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" id="explorar">
+      <div class="container">
+        <div class="route-tabs" role="tablist" aria-label="Rutas por carrera" id="route-tabs" data-reveal></div>
+        <div class="route-panel" id="route-panel" role="tabpanel" tabindex="-1"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Cómo avanzar</span>
+            <h2 data-split>Reglas claras, sin límites artificiales.</h2>
+          </div>
+        </div>
+        <div class="rules" data-stagger="100">
+          <article class="card rule" data-reveal>
+            <span class="icon-box" data-icon="book"></span>
+            <h3>Conocimientos mínimos</h3>
+            <p>Inglés técnico e introducción a las ciencias del espacio son la base de todas las rutas. Podés acreditarlos con los cursos de la Academia o con una certificación equivalente.</p>
+          </article>
+          <article class="card rule" data-reveal>
+            <span class="icon-box" data-icon="compass"></span>
+            <h3>Cursos recomendados</h3>
+            <p>Cada curso sugiere cursos previos. Son una guía, no un límite: podés inscribirte al curso para el que te sientas listo.</p>
+          </article>
+          <article class="card rule" data-reveal>
+            <span class="icon-box" data-icon="award"></span>
+            <h3>Progreso validado</h3>
+            <p>Avanzás de nivel con cursos efectivamente aprobados y certificados por la Academia, no con autodeclaraciones. Así tu ruta tiene valor real frente a terceros.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="mapa">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Vista general</span>
+            <h2 data-split>El mapa completo de rutas.</h2>
+            <p class="lead" data-reveal>Todos los cursos de la Academia, organizados por nivel y por ruta. Tocá cualquier curso para ver su detalle.</p>
+          </div>
+        </div>
+        <div class="matrix-wrap" data-reveal>
+          <div class="matrix" id="matrix"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" id="mi-ruta">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Mi ruta</span>
+            <h2 data-split>Tu progreso, en un solo lugar.</h2>
+            <p class="lead" data-reveal>Con el registro de alumnos vas a poder ver los niveles alcanzados, tu nivel actual y lo que te falta para avanzar.</p>
+          </div>
+        </div>
+        <div class="locked" data-reveal="scale">
+          <div class="locked__mock" aria-hidden="true">
+            <div class="ring-chart">
+              <svg viewBox="0 0 120 120">
+                <defs><linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b6cf6"/><stop offset="1" stop-color="#2fd5c5"/></linearGradient></defs>
+                <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(143,178,255,.12)" stroke-width="10"/>
+                <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ring-grad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="180"/>
+              </svg>
+              <b>45%</b>
+            </div>
+            <div class="mock-lines">
+              <div class="mock-line"><span>Nivel 1</span><i style="--w:100%"></i><span>100%</span></div>
+              <div class="mock-line"><span>Nivel 2</span><i style="--w:60%"></i><span>60%</span></div>
+              <div class="mock-line"><span>Nivel 3</span><i style="--w:15%"></i><span>15%</span></div>
+              <div class="mock-line"><span>Nivel 4</span><i style="--w:0%"></i><span>0%</span></div>
+            </div>
+          </div>
+          <div class="locked__overlay">
+            <span class="icon-box" data-icon="lock"></span>
+            <h3>Disponible con el registro de alumnos</h3>
+            <p>Estamos construyendo tu panel personal. Muy pronto vas a poder seguir tu progreso nivel por nivel, respaldado por los cursos que aprobaste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

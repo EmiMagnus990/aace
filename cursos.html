@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de cursos · AACE Cruz del Sur</title>
+  <meta name="description" content="Catálogo de cursos de la Academia Cruz del Sur: filtrá por ruta, nivel y modalidad. Contenidos mínimos definidos y certificación al aprobar.">
+  <meta name="theme-color" content="#03050a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/cursos.js" defer></script>
+</head>
+<body data-page="cursos">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="page-hero__deco" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Ubicación" data-reveal><a href="index.html">Inicio</a><i data-icon="chevron-right"></i><span>Cursos</span></nav>
+        <span class="eyebrow" data-reveal style="--d:100ms">Catálogo 2026 – 2027</span>
+        <h1 data-split style="--split-delay:200ms">Cursos para cada <span class="metal">etapa</span> de tu ruta.</h1>
+        <p class="lead" data-reveal style="--d:450ms">Filtrá por ruta, nivel o modalidad y elegí el curso para el que te sentís listo. Todos tienen contenidos mínimos definidos y certificación de la Academia al aprobar.</p>
+        <div class="hero-stats" id="catalog-stats" data-stagger="90" data-stagger-base="550"></div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" id="catalogo">
+      <div class="container">
+        <div class="toolbar" role="search" data-reveal>
+          <div class="toolbar__row">
+            <div class="search">
+              <label class="sr-only" for="q">Buscar cursos</label>
+              <i data-icon="search"></i>
+              <input type="search" id="q" placeholder="Buscar por nombre, tema o contenido…" autocomplete="off">
+              <button type="button" class="search__clear" aria-label="Borrar búsqueda"><i data-icon="x"></i></button>
+            </div>
+            <select class="select" id="f-nivel" aria-label="Filtrar por nivel">
+              <option value="">Todos los niveles</option>
+              <option value="1">Nivel 1 · Despegue</option>
+              <option value="2">Nivel 2 · Órbita</option>
+              <option value="3">Nivel 3 · Transferencia</option>
+              <option value="4">Nivel 4 · Espacio profundo</option>
+            </select>
+            <select class="select" id="f-modalidad" aria-label="Filtrar por modalidad">
+              <option value="">Toda modalidad</option>
+              <option value="Zoom">Zoom</option>
+              <option value="Presencial">Presencial</option>
+              <option value="Híbrido">Híbrido</option>
+            </select>
+            <select class="select" id="f-orden" aria-label="Ordenar cursos">
+              <option value="inicio">Próximo inicio</option>
+              <option value="nivel">Por nivel</option>
+              <option value="cupo">Más lugares libres</option>
+              <option value="az">A – Z</option>
+            </select>
+          </div>
+          <div class="chips" id="f-ruta" role="group" aria-label="Filtrar por ruta"></div>
+        </div>
+
+        <div class="results-info">
+          <span id="results-count" aria-live="polite"></span>
+          <button class="btn-reset" id="reset" type="button"><i data-icon="refresh"></i>Limpiar filtros</button>
+        </div>
+
+        <div class="grid-cards" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Cómo leer los niveles</span>
+            <h2 data-split>Cuatro niveles, un mismo rumbo.</h2>
+          </div>
+          <a class="link-arrow" href="rutas.html" data-reveal>Ver rutas por carrera <i data-icon="arrow-right"></i></a>
+        </div>
+        <div class="levels-legend" id="levels" data-stagger="100"></div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="card notice-band" data-reveal>
+          <span class="icon-box" data-icon="book"></span>
+          <div>
+            <h3>¿No sabés por dónde empezar?</h3>
+            <p>Todas las rutas comparten dos conocimientos mínimos: <b>Inglés técnico aeroespacial</b> e <b>Introducción a las ciencias del espacio</b>. Son el mejor primer paso.</p>
+          </div>
+          <div class="notice-band__actions">
+            <button class="btn btn-ghost btn-sm" type="button" data-open-course="c01">Inglés técnico</button>
+            <button class="btn btn-primary btn-sm" type="button" data-open-course="c02">Introducción al sector</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

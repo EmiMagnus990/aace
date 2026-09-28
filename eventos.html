@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda de eventos · AACE Cruz del Sur</title>
+  <meta name="description" content="Charlas, talleres, hackatones, noches de observación y convenciones de la Academia Cruz del Sur.">
+  <meta name="theme-color" content="#03050a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/eventos.js" defer></script>
+</head>
+<body data-page="eventos">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"><img src="assets/img/starship.webp" alt="" data-parallax="0.1"></div>
+      <div class="container page-hero__inner page-hero__split">
+        <div>
+          <nav class="breadcrumb" aria-label="Ubicación" data-reveal><a href="index.html">Inicio</a><i data-icon="chevron-right"></i><span>Eventos</span></nav>
+          <span class="eyebrow" data-reveal style="--d:100ms">Agenda de eventos</span>
+          <h1 data-split style="--split-delay:200ms">Aprender también es <span class="metal">estar ahí.</span></h1>
+          <p class="lead" data-reveal style="--d:450ms">Charlas, talleres, hackatones, noches de observación y convenciones para poner en práctica lo que aprendés y conectar con el sector.</p>
+        </div>
+        <div class="card countdown-card" id="next-card" data-reveal="scale" style="--d:300ms"></div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" id="agenda">
+      <div class="container">
+        <div class="toolbar" data-reveal>
+          <div class="chips" id="f-tipo" role="group" aria-label="Filtrar por tipo de evento"></div>
+        </div>
+        <div class="results-info"><span id="evt-count" aria-live="polite"></span></div>
+        <div class="agenda" id="agenda-list"></div>
+
+        <div style="margin-top:56px" data-reveal>
+          <h2 class="cm-h">Eventos anteriores</h2>
+          <div class="past-list" id="past-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="convenios">
+      <div class="container alliances">
+        <div>
+          <span class="eyebrow" data-reveal>Convenios y alianzas</span>
+          <h2 data-split style="margin-top:18px; font-size:clamp(2rem,4vw,3.2rem); letter-spacing:-.035em">Construimos puentes con el sector.</h2>
+          <p class="lead" data-reveal style="margin-top:18px">La Dirección negocia convenios con organizaciones nacionales e internacionales para nutrir la bolsa de oportunidades y la agenda de eventos.</p>
+          <ul class="alliance-list" data-stagger="100">
+            <li data-reveal><span class="icon-box" data-icon="briefcase"></span><div><b>Pasantías y prácticas</b><span>Experiencia real dentro de laboratorios, empresas y organismos del sector.</span></div></li>
+            <li data-reveal><span class="icon-box" data-icon="mic"></span><div><b>Charlas con referentes</b><span>Profesionales que hoy trabajan en el área comparten su camino.</span></div></li>
+            <li data-reveal><span class="icon-box" data-icon="trophy"></span><div><b>Hackatones co-organizados</b><span>Desafíos reales propuestos por organizaciones aliadas.</span></div></li>
+          </ul>
+          <a class="btn btn-primary" href="academia.html?perfil=organizacion#contacto" data-reveal>Quiero sumar mi organización <i data-icon="arrow-right" class="ico-arrow"></i></a>
+        </div>
+        <div class="slots" data-stagger="80">
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Próximo convenio</div></div>
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Próximo convenio</div></div>
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Próximo convenio</div></div>
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Próximo convenio</div></div>
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Próximo convenio</div></div>
+          <div class="slot" data-reveal><div><i data-icon="plus"></i>Tu organización</div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

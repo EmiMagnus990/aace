@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolsa de oportunidades · AACE Cruz del Sur</title>
+  <meta name="description" content="Becas, pasantías, procesos de selección y convocatorias del sector aeroespacial, filtradas según tu ruta y tu nivel.">
+  <meta name="theme-color" content="#03050a">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/oportunidades.js" defer></script>
+</head>
+<body data-page="oportunidades">
+  <div class="curtain" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container page-hero__inner page-hero__split">
+        <div>
+          <nav class="breadcrumb" aria-label="Ubicación" data-reveal><a href="index.html">Inicio</a><i data-icon="chevron-right"></i><span>Oportunidades</span></nav>
+          <span class="eyebrow" data-reveal style="--d:100ms">Bolsa de oportunidades</span>
+          <h1 data-split style="--split-delay:200ms">Tu puente hacia el <span class="metal">sector.</span></h1>
+          <p class="lead" data-reveal style="--d:450ms">Becas, pasantías, procesos de selección y convocatorias del sector aeroespacial, curados por la Dirección y filtrados según tu ruta y tu nivel.</p>
+          <div class="hero-stats" id="opp-stats" data-stagger="90" data-stagger-base="550"></div>
+        </div>
+        <div data-reveal="scale" style="--d:250ms; position:relative">
+          <div class="hero-photo">
+            <img src="assets/img/falcon9.webp" alt="Cohete Falcon 9 despegando desde la plataforma de lanzamiento, con el mar de fondo" width="767" height="1151" data-parallax="0.08">
+          </div>
+          <div class="float-chip float-chip--a"><span class="icon-box" data-icon="award"></span><span><b>Becas</b><small>Formación financiada</small></span></div>
+          <div class="float-chip float-chip--b"><span class="icon-box" data-icon="briefcase"></span><span><b>Pasantías</b><small>Experiencia en la industria</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top" id="bolsa">
+      <div class="container">
+        <div class="notice" data-reveal style="margin-bottom:20px">
+          <i data-icon="info"></i>
+          <p><b>Contenido de demostración.</b> Las organizaciones y convocatorias de esta página son ejemplos ilustrativos para mostrar cómo funcionará la bolsa de oportunidades.</p>
+        </div>
+
+        <div class="toolbar" data-reveal>
+          <div class="chips" id="f-tipo" role="group" aria-label="Filtrar por tipo"></div>
+          <div class="toolbar__row">
+            <select class="select" id="f-ruta" aria-label="Filtrar por ruta">
+              <option value="">Todas las rutas</option>
+              <option value="computacion">Ciencias de la Computación</option>
+              <option value="vida">Ciencias Médicas y Biológicas</option>
+              <option value="ingenieria">Ingenierías</option>
+            </select>
+            <select class="select" id="f-nivel" aria-label="Filtrar por nivel alcanzado">
+              <option value="">Cualquier nivel</option>
+              <option value="1">Estoy en nivel 1</option>
+              <option value="2">Estoy en nivel 2</option>
+              <option value="3">Estoy en nivel 3</option>
+              <option value="4">Estoy en nivel 4</option>
+            </select>
+            <label class="switch"><input type="checkbox" id="f-abiertas"> Solo convocatorias abiertas</label>
+          </div>
+        </div>
+
+        <div class="results-info">
+          <span id="opp-count" aria-live="polite"></span>
+          <button class="btn-reset" id="reset" type="button"><i data-icon="refresh"></i>Limpiar filtros</button>
+        </div>
+        <div class="opp-grid" id="opp-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__text">
+            <span class="eyebrow" data-reveal>Cómo funciona la bolsa</span>
+            <h2 data-split>Curada, filtrada y trazable.</h2>
+          </div>
+        </div>
+        <div class="flow" data-stagger="110">
+          <article class="card flow__item" data-reveal>
+            <span class="icon-box" data-icon="star"></span>
+            <h3>Curada por la Dirección</h3>
+            <p>Cada convocatoria llega a través de los convenios y alianzas que la Dirección negocia con organizaciones del sector.</p>
+          </article>
+          <article class="card flow__item" data-reveal>
+            <span class="icon-box" data-icon="filter"></span>
+            <h3>Filtrada para vos</h3>
+            <p>Cada oportunidad indica la ruta y el nivel recomendados, para que veas primero lo que realmente se ajusta a tu perfil.</p>
+          </article>
+          <article class="card flow__item" data-reveal>
+            <span class="icon-box" data-icon="send"></span>
+            <h3>Postulación con seguimiento</h3>
+            <p>Con el registro de alumnos vas a poder postularte con tu perfil completo y seguir el estado de cada postulación.</p>
+            <span class="badge badge--soon">Próximamente</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="card notice-band" data-reveal>
+          <span class="icon-box" data-icon="link"></span>
+          <div>
+            <h3>¿Tu organización es parte del sector?</h3>
+            <p>Publicá becas, pasantías o búsquedas y conectá con estudiantes universitarios formados en ciencias del espacio.</p>
+          </div>
+          <div class="notice-band__actions">
+            <a class="btn btn-primary btn-sm" href="academia.html?perfil=organizacion#contacto">Quiero publicar una oportunidad <i data-icon="arrow-right" class="ico-arrow"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
